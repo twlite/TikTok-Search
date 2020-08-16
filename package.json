@@ -1,0 +1,31 @@
+{
+  "name": "tiktok-search",
+  "version": "1.0.0",
+  "description": "Get basic data from TikTok.",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd test && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Snowflake107/TikTok-Search.git"
+  },
+  "keywords": [
+    "tiktok",
+    "tiktok-search",
+    "tiktok-scraper",
+    "tiktok-api",
+    "tiktok-downloader",
+    "tiktok-video-downloader"
+  ],
+  "author": "Snowflake107",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Snowflake107/TikTok-Search/issues"
+  },
+  "homepage": "https://github.com/Snowflake107/TikTok-Search#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "node-fetch": "^2.6.0"
+  }
+}
