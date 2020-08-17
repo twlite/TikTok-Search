@@ -39,8 +39,8 @@ const TikTok = require("tiktok-search");
 const fs = require("fs");
 
 TikTok.download("https://vm.tiktok.com/ZMJrea3bs/")
-    .then(i => {
-        res.pipe(fs.createWriteStream(`./${i.title}.mp4`));
+    .then(res => {
+        res.pipe(fs.createWriteStream(`./${res.title}.mp4`));
     });
 
 ```
