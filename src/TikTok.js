@@ -1,4 +1,5 @@
 const Util = require("./Structures/Util.js");
+const https = require("https");
 
 /**
  * Validates tiktok url
@@ -42,7 +43,25 @@ async function getEmbed(url) {
     return await Util.parseEmbed(url);
 }
 
+/**
+ * Downloads tiktok video
+ * @param {string} url TikTok video url
+ */
+function download(url) {
+    return new Promise(async (resolve, reject) => {
+        try {
+            const data = await getInfo(url);
+            if (!data || !data.streamURL) return reject(new Error("Couldn't resolve stream."));
+            https.get(data.streamURL, res => resolve(res));
+        } catch(e) {
+            reject("Couldn't resolve stream.");
+        }
+    });
+
+}
+
 module.exports = {
+    download,
     validateURL,
     getInfo,
     getUser,

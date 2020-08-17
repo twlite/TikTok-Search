@@ -1,8 +1,19 @@
 {
   "name": "tiktok-search",
-  "version": "1.0.0",
-  "description": "Get basic data from TikTok.",
+  "version": "2.0.0",
+  "description": "Simple module to fetch data from TikTok.",
   "main": "index.js",
+  "types": "./typings/index.d.ts",
+  "exports": {
+    ".": [
+      {
+        "require": "./index.js",
+        "import": "./esm/index.mjs"
+      },
+      "./index.js"
+    ],
+    "./esm": "./esm/index.mjs"
+  },
   "scripts": {
     "test": "cd test && node index.js"
   },
@@ -16,7 +27,9 @@
     "tiktok-scraper",
     "tiktok-api",
     "tiktok-downloader",
-    "tiktok-video-downloader"
+    "tiktok-video-downloader",
+    "tiktok-signature",
+    "tiktok-info"
   ],
   "author": "Snowflake107",
   "license": "MIT",

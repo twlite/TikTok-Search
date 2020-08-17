@@ -59,7 +59,7 @@ class Util {
                     }
                 },
                 country: BASE["$region"],
-                streamURL: data.props.pageProps.videoData.itemInfos.video.urls[0] || [],
+                streamURL: data.props.pageProps.videoData.itemInfos.video.urls[0] || null,
                 streams: data.props.pageProps.videoData.itemInfos.video.urls,
                 videoDetails: data.props.pageProps.videoData.itemInfos.video.videoMeta,
                 duration: data.props.pageProps.videoData.itemInfos.video.videoMeta.duration * 1000,

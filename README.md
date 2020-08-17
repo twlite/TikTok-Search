@@ -1,5 +1,5 @@
 # TikTok Search
-Simple module to fetch TikTok data.
+Simple module to fetch data from TikTok.
 
 # Installing
 
