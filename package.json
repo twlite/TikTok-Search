@@ -1,6 +1,6 @@
 {
   "name": "tiktok-search",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Simple module to fetch data from TikTok.",
   "main": "index.js",
   "types": "./typings/index.d.ts",

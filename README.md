@@ -36,14 +36,11 @@ Validates TikTok url.
 
 ```js
 const TikTok = require("tiktok-search");
-const https = require("https");
 const fs = require("fs");
 
-TikTok.getInfo("https://vm.tiktok.com/ZMJrea3bs/")
+TikTok.download("https://vm.tiktok.com/ZMJrea3bs/")
     .then(i => {
-        https.get(i.streamURL, res => {
-            res.pipe(fs.createWriteStream(`./${i.title}.mp4`));
-        });
+        res.pipe(fs.createWriteStream(`./${i.title}.mp4`));
     });
 
 ```
