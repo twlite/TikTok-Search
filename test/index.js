@@ -1,10 +1,5 @@
 const TikTok = require("../index.js");
-const https = require("https");
 const fs = require("fs");
 
-TikTok.getInfo("https://vm.tiktok.com/ZMJrea3bs/")
-    .then(i => {
-        https.get(i.streamURL, res => {
-            res.pipe(fs.createWriteStream("./TikTok.mp4"));
-        });
-    });
+TikTok.download("https://www.tiktok.com/@twinny__girls/video/6861609989497277697")
+.then(stream => stream.pipe(fs.createWriteStream("./TikTok.mp4")));
