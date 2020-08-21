@@ -40,7 +40,7 @@ const fs = require("fs");
 
 TikTok.download("https://vm.tiktok.com/ZMJrea3bs/")
     .then(res => {
-        res.pipe(fs.createWriteStream(`./${res.title}.mp4`));
+        res.pipe(fs.createWriteStream(`./song.mp4`));
     });
 
 ```
