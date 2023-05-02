@@ -30,7 +30,9 @@ async function getUser(username) {
     const html = await Util.html(`https://www.tiktok.com/@${username}`);
     if (!html) return null;
     const $ = Util.getDocument(html);
-    const rawJSON = $("#__NEXT_DATA__")[0].children[0].data;
+    const nextData = $("#__NEXT_DATA__")[0];
+    if (!nextData) return null;
+    const rawJSON = nextData.children[0].data;
     return Util.parseUserData(rawJSON);
 }
 
